@@ -309,6 +309,7 @@ const HomePage: React.FC = () => {
                 {/* Section 1: รูปเว็บไซต์ */}
                 <div className="mb-6">
                   <h4 className="text-lg font-medium text-gray-200 mb-2">ภาพเว็บไซต์</h4>
+                  <h4 className="text-lg font-medium text-gray-200 mb-2"></h4>
                   <div className="relative">
                     <div
                       ref={activityWebRef}
