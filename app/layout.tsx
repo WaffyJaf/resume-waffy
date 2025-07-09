@@ -7,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="th" className="scroll-smooth">
-      <body className="flex flex-col min-h-screen bg-gradient-to-b from-black via-indigo-950 to-purple-950 text-white">
+      <body className="flex flex-col min-h-screen bg-gradient-to-b bg-slate-950 text-white">
         <div className="relative">
           {/* Starfield Background */}
           <div
