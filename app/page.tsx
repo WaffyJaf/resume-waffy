@@ -86,7 +86,7 @@ import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu} from 'lu
           {/* Navigation Bar */}
             <nav className={`fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-md transition-all duration-300 ${isScrolled ? 'shadow-lg' : ''}`}>
               <div className="flex justify-between items-center py-4  px-6 max-w-8xl mx-auto">
-                <h1 className="text-xl font-bold text-white ">Portfolio</h1>
+                <h1 className="text-xl font-bold text-white hidden md:block">Portfolio</h1>
                 <ul className="flex gap-6 text-white">
                   {[
                     { label: 'HOME', id: 'home' },
@@ -153,7 +153,7 @@ import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu} from 'lu
                       ข้อมูลติดต่อ
                     </button>
                   </div>
-                  <div className="flex justify-center md:justify-start space-x-6 mb-3 ml-30">
+                  <div className="flex justify-center md:justify-start space-x-6 mb-3 ">
                       {[
                         { icon: Github, link: 'https://github.com/WaffyJaf' },
                         { icon: Facebook, link: 'https://www.facebook.com/natthathida.khamai.2025?locale=th_TH' },
@@ -315,13 +315,13 @@ import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu} from 'lu
                           ].map((image, imgIndex) => (
                             <div
                               key={imgIndex}
-                              className="w-[600px] flex-shrink-0 snap-center flex flex-col items-center animate-slide-up hover:scale-105 transition-transform duration-300"
+                              className="w-[450px] flex-shrink-0 snap-center flex flex-col items-center animate-slide-up hover:scale-105 transition-transform duration-300"
                               style={{ animationDelay: `${imgIndex * 0.2}s` }}
                             >
                               <Image
                                 src={image.src}
                                 alt={`Activity Up preview ${imgIndex + 1}`}
-                                width={600}      
+                                width={500}      
                                 height={300}      
                                 className="rounded-lg shadow-lg mb-2 object-cover"
                               />
@@ -492,6 +492,7 @@ import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu} from 'lu
                             '/manageproduct.png',
                             '/all.png'
                           ].map((image, imgIndex) => (
+                            
                             <Image
                               key={imgIndex}
                               src={image}
@@ -564,13 +565,13 @@ import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu} from 'lu
                           ].map((item, imgIndex) => (
                             <div
                               key={imgIndex}
-                              className="w-[550px] flex-shrink-0 snap-center flex flex-col items-center animate-slide-up hover:scale-105 transition-transform duration-300"
+                              className="w-[450px] flex-shrink-0 snap-center flex flex-col items-center animate-slide-up hover:scale-105 transition-transform duration-300"
                               style={{ animationDelay: `${imgIndex * 0.2}s` }}
                             >
                               <Image
                                 src={item.src}
                                 alt={`Game Store preview ${imgIndex + 1}`}
-                                width={640}     
+                                width={500}     
                                 height={320}    
                                 className="rounded-lg shadow-lg mb-2 object-cover"
                               />
