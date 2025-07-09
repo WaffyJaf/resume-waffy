@@ -1,7 +1,7 @@
  "use client";
 import Image from 'next/image'
 import React, { useState, useEffect, useRef } from 'react';
- import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu, Download } from 'lucide-react';
+import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu} from 'lucide-react';
 
 
     // Define interfaces for TypeScript
@@ -255,10 +255,12 @@ import React, { useState, useEffect, useRef } from 'react';
                           className="group relative flex flex-col items-center p-4 hover:bg-white/10 rounded-lg transition-all duration-300 transform hover:scale-105 animate-slide-up"
                           style={{ animationDelay: `${index * 0.2}s` }}
                         >
-                          <img
+                          <Image
                             src={skill.logo}
                             alt={`${skill.name} logo`}
-                            className="w-16 h-16 object-contain mb-2 group-hover:scale-110 transition-transform duration-300"
+                            width={64}  
+                            height={64}
+                            className="object-contain mb-2 group-hover:scale-110 transition-transform duration-300"
                           />
                           <span className="text-sm font-medium text-gray-300">{skill.name}</span>
                         </div>
@@ -313,13 +315,15 @@ import React, { useState, useEffect, useRef } from 'react';
                           ].map((image, imgIndex) => (
                             <div
                               key={imgIndex}
-                              className="w-[550px] flex-shrink-0 snap-center flex flex-col items-center animate-slide-up hover:scale-105 transition-transform duration-300"
+                              className="w-[600px] flex-shrink-0 snap-center flex flex-col items-center animate-slide-up hover:scale-105 transition-transform duration-300"
                               style={{ animationDelay: `${imgIndex * 0.2}s` }}
                             >
-                              <img
+                              <Image
                                 src={image.src}
                                 alt={`Activity Up preview ${imgIndex + 1}`}
-                                className="w-full h-[300px] object-cover rounded-lg shadow-lg mb-2"
+                                width={600}      
+                                height={300}      
+                                className="rounded-lg shadow-lg mb-2 object-cover"
                               />
                               <p className="text-sm text-gray-300 text-center">{image.caption}</p>
                             </div>
@@ -359,12 +363,13 @@ import React, { useState, useEffect, useRef } from 'react';
                                 '/AC/record.png',
                                 '/AC/regis.png'
                               ].map((image, imgIndex) => (
-                                <img
-                                  key={imgIndex}
+                                <Image
                                   src={image}
                                   alt={`Activity Up app preview ${imgIndex + 1}`}
-                                  className="w-70 h-135 object-cover rounded-lg shadow-lg snap-center flex-shrink-0 animate-slide-up hover:scale-105 transition-transform duration-300"
-                                  style={{ animationDelay: `${(imgIndex + 4) * 0.2}s` }}
+                                  width={280}
+                                  height={540}
+                                  className="object-cover"
+                                  priority={imgIndex === 0} // โหลดรูปแรกก่อน (ถ้ต้องการ)
                                 />
                               ))}
                             </div>
@@ -423,10 +428,12 @@ import React, { useState, useEffect, useRef } from 'react';
                               className="w-[380px] flex-shrink-0 snap-center flex flex-col items-center animate-slide-up hover:scale-105 transition-transform duration-300"
                               style={{ animationDelay: `${imgIndex * 0.2}s` }}
                             >
-                              <img
+                              <Image
                                 src={item.src}
                                 alt={`Project preview ${imgIndex + 1}`}
-                                className="w-full h-64 object-cover rounded-lg shadow-lg mb-2"
+                                width={480}      
+                                height={256}     
+                                className="rounded-lg shadow-lg mb-2 object-cover"
                               />
                               <p className="text-white text-sm text-center">{item.caption}</p>
                             </div>
@@ -484,12 +491,13 @@ import React, { useState, useEffect, useRef } from 'react';
                             '/manageproduct.png',
                             '/all.png'
                           ].map((image, imgIndex) => (
-                            <img
-                              key={imgIndex}
+                            <Image
                               src={image}
                               alt={`Game Store preview ${imgIndex + 1}`}
-                              className="w-120 h-70 object-cover rounded-lg shadow-lg snap-center flex-shrink-0 animate-slide-up hover:scale-105 transition-transform duration-300"
-                              style={{ animationDelay: `${imgIndex * 0.2}s` }}
+                              width={480}      
+                              height={280}     
+                              className="object-cover rounded-lg"
+                              priority={imgIndex === 0} 
                             />
                           ))}
                         </div>
@@ -557,10 +565,12 @@ import React, { useState, useEffect, useRef } from 'react';
                               className="w-[550px] flex-shrink-0 snap-center flex flex-col items-center animate-slide-up hover:scale-105 transition-transform duration-300"
                               style={{ animationDelay: `${imgIndex * 0.2}s` }}
                             >
-                              <img
+                              <Image
                                 src={item.src}
                                 alt={`Game Store preview ${imgIndex + 1}`}
-                                className="w-full h-80 object-cover rounded-lg shadow-lg mb-2"
+                                width={640}     
+                                height={320}    
+                                className="rounded-lg shadow-lg mb-2 object-cover"
                               />
                               <p className="text-sm text-gray-300 text-center">{item.caption}</p>
                             </div>
