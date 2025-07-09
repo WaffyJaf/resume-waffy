@@ -1,9 +1,8 @@
  "use client";
-
+import Image from 'next/image'
 import React, { useState, useEffect, useRef } from 'react';
- import { ChevronDown, Github,MessageCircle, Facebook, Mail, Phone, MapPin, Code, Cpu, Download } from 'lucide-react';
- 
-import { caption } from 'framer-motion/client';
+ import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu, Download } from 'lucide-react';
+
 
     // Define interfaces for TypeScript
     interface MousePosition {
@@ -121,11 +120,13 @@ import { caption } from 'framer-motion/client';
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32 sm:pt-20">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="flex items-center justify-center md:justify-start h-full animate-fade-in">
-                  <img
-                    src="/waffyy.png"
-                    alt="Astronaut"
-                    className="w-full max-w-[18rem] sm:max-w-[20rem] md:max-w-[28rem] object-contain"
-                  />
+                 <Image
+                  src="/waffyy.png"
+                  alt="Astronaut"
+                  width={448}  // 28rem * 16px = 448px (max size ที่ตั้งไว้)
+                  height={448} // กำหนดให้เท่ากัน เพื่อรักษาสัดส่วน
+                  className="w-full max-w-[18rem] sm:max-w-[20rem] md:max-w-[28rem] object-contain"
+                />
                 </div>
                 <div className="text-center md:text-left animate-fade-in mt-20">
                   <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
