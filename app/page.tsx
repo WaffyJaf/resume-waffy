@@ -364,6 +364,7 @@ import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu} from 'lu
                                 '/AC/regis.png'
                               ].map((image, imgIndex) => (
                                 <Image
+                                  key={imgIndex}
                                   src={image}
                                   alt={`Activity Up app preview ${imgIndex + 1}`}
                                   width={280}
@@ -492,6 +493,7 @@ import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu} from 'lu
                             '/all.png'
                           ].map((image, imgIndex) => (
                             <Image
+                              key={imgIndex}
                               src={image}
                               alt={`Game Store preview ${imgIndex + 1}`}
                               width={480}      
