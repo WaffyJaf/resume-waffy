@@ -25,6 +25,13 @@ import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu} from 'lu
       const gameRef = useRef<HTMLDivElement>(null);
       const activityWebRef = useRef<HTMLDivElement>(null);
       const activityAppRef = useRef<HTMLDivElement>(null);
+      
+      const [selectedImage, setSelectedImage] = useState(null);
+
+      const closeModal = () => {
+        setSelectedImage(null);
+      };
+
 
       useEffect(() => {
         const handleScroll = () => {
@@ -317,6 +324,7 @@ import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu} from 'lu
                               key={imgIndex}
                               className="w-[450px] flex-shrink-0 snap-center flex flex-col items-center animate-slide-up hover:scale-105 transition-transform duration-300"
                               style={{ animationDelay: `${imgIndex * 0.2}s` }}
+                              
                             >
                               <Image
                                 src={image.src}
@@ -480,11 +488,12 @@ import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu} from 'lu
                       </div>
 
                       {/* รูปภาพพร้อมปุ่มเลื่อน ซ้าย/ขวา แสดงได้ทุกขนาดหน้าจอ */}
-                      <div className="relative mb-4">
+                      <div className="relative mb-4 w-full">
                         {/* ref container */}
                         <div
                           ref={gameRef}
                           className="overflow-x-auto flex gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
+                          style={{ width: '100%' }}
                         >
                           {[
                             '/homegame.png',
@@ -499,7 +508,7 @@ import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu} from 'lu
                               alt={`Game Store preview ${imgIndex + 1}`}
                               width={480}      
                               height={280}     
-                              className="object-cover rounded-lg"
+                              className="object-cover rounded-lg flex-shrink-0"
                               priority={imgIndex === 0} 
                             />
                           ))}
