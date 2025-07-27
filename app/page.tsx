@@ -62,20 +62,22 @@ const HomePage: React.FC = () => {
   }, []);
 
   const skills: Skill[] = [
-    { name: 'HTML', logo: '/logos/html.png', category: 'Development' },
-    { name: 'CSS', logo: '/logos/css.svg', category: 'Development' },
-    { name: 'JavaScript', logo: '/logos/javascript.png', category: 'Development' },
-    { name: 'TypeScript', logo: '/logos/typescript.png', category: 'Development' },
-    { name: 'React', logo: '/logos/react.png', category: 'Development' },
-    { name: 'Next.js', logo: '/logos/nextjs.png', category: 'Development' },
-    { name: 'Tailwind', logo: '/logos/tailwind.png', category: 'Development' },
-    { name: 'Flutter', logo: '/logos/flutter.png', category: '' },
-    { name: 'Node.js', logo: '/logos/nodejs.png', category: 'Development' },
-    { name: 'MySQL', logo: '/logos/mysql.png', category: 'Development' },
+    { name: 'HTML', logo: '/logos/html.png', category: 'Front-end' },
+    { name: 'CSS', logo: '/logos/css.svg', category: 'Front-end' },
+    { name: 'JavaScript', logo: '/logos/javascript.png', category: 'Backend' },
+    { name: 'TypeScript', logo: '/logos/typescript.png', category: 'Backend' },
+    { name: 'React', logo: '/logos/react.png', category: 'Front-end' },
+    { name: 'Next.js', logo: '/logos/nextjs.png', category: 'Front-end' },
+    { name: 'Angular', logo: '/logos/angular.webp', category: 'Front-end' },
+    { name: 'Tailwind', logo: '/logos/tailwind.png', category: 'Front-end' },
+    { name: 'Flutter', logo: '/logos/flutter.png', category: 'Front-end' },
+    { name: 'Node.js', logo: '/logos/nodejs.png', category: 'Backend' },
+    { name: 'Net', logo: '/logos/net.png', category: 'Backend' },
+    { name: 'MySQL', logo: '/logos/mysql.png', category: 'Backend' },
     { name: 'Figma', logo: '/logos/figma.png', category: 'ออกแบบ UI/UX' },
     { name: 'Photoshop', logo: '/logos/photoshop.png', category: 'ออกแบบ UI/UX' },
     { name: 'Arduino', logo: '/logos/arduino.png', category: 'Hardware Skill' },
-    { name: 'Firebase', logo: '/logos/firebase.png', category: 'Hardware Skill' },
+    { name: 'Firebase', logo: '/logos/firebase.png', category: 'Backend' },
     { name: 'Docker', logo: '/logos/docker.png', category: 'Hardware Skill' },
     { name: 'KiCad', logo: '/logos/kiCad.png', category: 'Hardware Skill' },
     { name: 'C++', logo: '/logos/c.png', category: 'Hardware Skill' },
@@ -211,10 +213,10 @@ const HomePage: React.FC = () => {
                 เกี่ยวกับฉัน
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed">
-                ดิฉันมีความสนใจด้านการเขียนโปรแกรมและการประยุกต์ใช้ซอฟต์แวร์ให้สามารถทำงานร่วมกับระบบต่าง ๆ ได้ 
-                โดยเฉพาะอย่างยิ่ง มีความสนใจในด้าน การพัฒนาเว็บไซต์ รวมถึง การจัดการฐานข้อมูล นอกจากนี้ยังมีพื้นฐานด้าน
-                ระบบสมองกลฝังตัวและวงจรอิเล็กทรอนิกส์ ซึ่งสามารถประยุกต์ใช้ในการพัฒนาอุปกรณ์ IoT 
-                จึงมุ่งหวังที่จะมีโอกาสฝึกงานในองค์กรที่สามารถต่อยอดความรู้และทักษะเหล่านี้ได้จริง
+                ดิฉันมีความสนใจในด้านการพัฒนาเว็บไซต์ และแอปพลิเคชัน มีประสบการณ์ในการพัฒนาระบบอีคอมเมิร์ซ ระบบกิจกรรมของมหาวิทยาลัย
+                ระบบการชำระเงินที่มี Dashboard สรุปยอดขาย  มีทักษะในการเชื่อมต่อ API และพร้อมเรียนรู้เทคโนโลยีสมัยใหม่ 
+                จึงมุ่งหวังที่จะมีโอกาสฝึกงานในองค์กร ที่สามารถต่อยอดความรู้และทักษะเหล่านี้ได้จริง ละมุ่งมั่นที่จะส่งมอบงานที่มีคุณภาพ
+
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
@@ -233,7 +235,7 @@ const HomePage: React.FC = () => {
             <div className="relative">
               <div className="w-80 h-80 mx-auto bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10">
                 <div className="w-60 h-60 bg-gradient-to-r from-blue-900 to-purple-600 rounded-full flex items-center justify-center">
-                  <span className="text-6xl">🚀</span>
+                  <span className="text-6xl">📱</span>
                 </div>
               </div>
             </div>
@@ -250,7 +252,7 @@ const HomePage: React.FC = () => {
             </h2>          
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {['Development', 'Hardware Skill', 'ออกแบบ UI/UX' , 'Tools'].map((category) => (
+            {['Front-end', 'Backend', 'ออกแบบ UI/UX' , 'Tools'].map((category) => (
               <div key={category} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <h3 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   {category}
@@ -296,8 +298,8 @@ const HomePage: React.FC = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               <div className="relative z-10">
-                <h3 className="text-xl font-semibold mb-2">Activity Up</h3>
-                <p className="text-gray-300 mb-3">เว็บไซต์เพื่ออำนวยความสะดวกสำหรับกิจกรรมมหาวิทยาลัยพะเยา</p>
+                <h3 className="text-xl font-semibold mb-2 text-purple-400">Activity Up</h3>
+                <p className="text-gray-300 mb-3">เว็บไซต์อำนวยความสะดวกสำหรับกิจกรรมมหาวิทยาลัยพะเยา ใช้ระบบล็อกอิน Microsoft ในการเก็บ token </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {['React', 'Tailwind CSS','Node.js','TypeScript', 'Mysql', 'Prisma', 'Flutter'].map((tech, techIndex) => (
                     <span key={techIndex} className="px-3 py-1 bg-white/10 rounded-full text-sm">
@@ -319,6 +321,8 @@ const HomePage: React.FC = () => {
                         { src: '/AC/login.png', caption: 'หน้าเข้าสู่ระบบ' },
                         { src: '/AC/home.png', caption: 'หน้าแรกของเว็บไซต์และฟังก์ชันหลัก' },
                         { src: '/AC/pjdetial.png', caption: 'รายละเอียดกิจกรรม' },
+                        { src: '/AC/sh.png', caption: 'หน้าค้นหาประวัตินิสิต' },
+                        { src: '/AC/save.png', caption: 'หน้าบันทึกการเข้าร่วมกิจกรรม' },
                         { src: '/AC/activity.png', caption: 'หน้ากิจกรรมที่มีการจัดขึ้น' },
                       ].map((image, imgIndex) => (
                         <div
@@ -359,7 +363,7 @@ const HomePage: React.FC = () => {
 
                 {/* Section 2: รูปแอปมือถือ */}
                 <div>
-                  <h4 className="text-lg font-medium text-gray-200 mb-2">ภาพแอปพลิเคชันมือถือ</h4>
+                  <h4 className="text-lg font-medium text-gray-200 mb-2">ภาพแอปพลิเคชันมือถือ (Flutter)</h4>
                   <div className="relative">
                     <div
                       ref={activityAppRef}
@@ -370,6 +374,7 @@ const HomePage: React.FC = () => {
                         { src: '/AC/scan.png', caption: 'หน้าสแกน QR' },
                         { src: '/AC/record.png', caption: 'หน้าประวัติ' },
                         { src: '/AC/regis.png', caption: 'หน้าลงทะเบียน' }
+                        
                       ].map((image, imgIndex) => (
                         <div
                           key={imgIndex}
@@ -408,6 +413,8 @@ const HomePage: React.FC = () => {
               </div>
             </div>
 
+            
+
             {/* Project 2: Smart Mailbox */}
             <div
               className="group relative bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 animate-fade-in"
@@ -415,10 +422,10 @@ const HomePage: React.FC = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               <div className="relative z-10">
-                <h3 className="text-xl font-semibold mb-2">Miniproject ทางด้านฮาร์ดแวร์</h3>
-                <p className="text-gray-300 mb-3">รวมโปรเจคที่เคยทำมาทั้งในส่วนของการออกแบบวงจร การประกอบวงจร การเชื่อมต่อ WI-FI และ Docker เบื้องต้น</p>
+                <h3 className="text-xl font-semibold mb-2 text-emerald-300">ระบบชำระเงินคาเฟ่ พร้อม Dashboard สรุปยอด</h3>
+                <p className="text-gray-300 mb-3">โปรเจคเว็บที่พัฒนาโดย .NET + Angular สำหรับชำระเงินแบบง่าย อำนวยความสะดวกแก่ผู้ประกอบการ</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {['KiCad','Arduino', 'ESP32', 'C++', 'IoT' , 'Docker'].map((tech, techIndex) => (
+                  {['.NET','Angular', 'TypeScript'].map((tech, techIndex) => (
                     <span key={techIndex} className="px-3 py-1 bg-white/10 rounded-full text-sm">
                       {tech}
                     </span>
@@ -432,9 +439,11 @@ const HomePage: React.FC = () => {
                     className="overflow-x-auto flex gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
                   >
                     {[
-                      { src: '/k/k3.png', caption: 'ออกแบบวงจรควบคุมความเร็วมอเตอร์โดยใช้ KiCad และทำการบัดกรีเพื่อทดลองใช้งาน' },
-                      { src: '/k/car.jpg', caption: 'ประกอบรถ Smart Robot Car พร้อมเขียนโปรแกรมควบคุมผ่าน Arduino IDE เช่น การเดินตามเส้น ควบคุมรถด้วยจอยสติ๊ก และตรวจจับสิ่งกีดขวาง' },
-                      { src: '/k/to.jpg', caption: 'ตู้ไปรษณีย์อัจฉริยะ ตรวจจับการเปิดตู้ไปรษณีย์ด้วยเซนเซอร์อินฟราเรด (IR sensor) เมื่อมีจดหมายเข้ามา จะส่งข้อความแจ้งเตือนผ่าน LINE Notify' },
+                      { src: '/cafe/homecafe.png', caption: 'หน้าหลักแสดงเมนูและสามารถเพิ่มลบ สินค้าได้' },
+                      { src: '/cafe/das.png', caption: 'หน้าสรุปยอดขาย สินค้าขายดี แนวโน้ม' },
+                      { src: '/cafe/pay.png', caption: 'หน้าชำระเงินและเพิ่มสินค้าลงตะกร้า' },
+                      { src: '/cafe/manage.png', caption: 'หน้าเพิ่มหมวดหมู่สินค้า' },
+                      { src: '/cafe/addcafe.png', caption: 'หน้าเพิ่มสินค้า' },
                     ].map((item, imgIndex) => (
                       <div
                         key={imgIndex}
@@ -497,10 +506,12 @@ const HomePage: React.FC = () => {
                     className="overflow-x-auto flex gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
                   >
                     {[
+                      { src: '/lo.png', caption: 'หน้า Login' },
                       { src: '/homegame.png', caption: 'หน้าแรก' },
                       { src: '/cart.png', caption: 'ตะกร้าสินค้า' },
+                      { src: '/pop.png', caption: 'หน้าเติมเงิน' },
+                      { src: '/all.png', caption: 'สินค้าทั้งหมด' },
                       { src: '/manageproduct.png', caption: 'จัดการสินค้า' },
-                      { src: '/all.png', caption: 'สินค้าทั้งหมด' }
                     ].map((image, imgIndex) => (
                       <div
                         key={imgIndex}
@@ -626,7 +637,7 @@ const HomePage: React.FC = () => {
               ข้อมูลติดต่อ
             </h2>
             <p className="text-lg text-gray-300">
-              สามารถติดต่อได้ผ่านช่องทางด้านล่างนี้ หากต้องการพูดคุยหรือสอบถามข้อมูลเพิ่มเติม
+              หากต้องการพูดคุยหรือสอบถามข้อมูลเพิ่มเติม
             </p>
           </div>
           <div className="space-y-8">
@@ -673,11 +684,11 @@ const HomePage: React.FC = () => {
           >
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 bg-red-700 hover:bg-red-950 p-2 rounded-full text-white"
+              className="absolute top-1 right-1 md:top-4 md:right-4 bg-red-700 hover:bg-red-950 p-2 rounded-full text-white z-10"
               aria-label="Close enlarged image"
             >
               <svg
-                className="w-6 h-6"
+                className="w-5 h-5 md:w-6 md:h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
