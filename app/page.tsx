@@ -26,6 +26,7 @@ const HomePage: React.FC = () => {
   const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 });
   const project2Ref = useRef<HTMLDivElement>(null);
   const project4Ref = useRef<HTMLDivElement>(null);
+  const project3Ref = useRef<HTMLDivElement>(null);
   const gameRef = useRef<HTMLDivElement>(null);
   const activityWebRef = useRef<HTMLDivElement>(null);
   const activityAppRef = useRef<HTMLDivElement>(null);
@@ -306,7 +307,20 @@ const HomePage: React.FC = () => {
                       {tech}
                     </span>
                   ))}
+                  
                 </div>
+                <h3 className="text-sm text-yellow-400 mb-2">
+                  Source Code Git:{' '}
+                  <a
+                    href="https://github.com/WaffyJaf/Project-Activity"
+                    className="underline text-blue-500 hover:text-blue-700"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://github.com/WaffyJaf/Project-Activity
+                  </a>
+                </h3>
+
 
                 {/* Section 1: รูปเว็บไซต์ */}
                 <div className="mb-6">
@@ -430,12 +444,24 @@ const HomePage: React.FC = () => {
                       {tech}
                     </span>
                   ))}
+                  
                 </div>
+                <h3 className="text-sm text-yellow-400 mb-2">
+                      Source Code Git:{' '}
+                      <a
+                        href="https://github.com/WaffyJaf/CaFewaffy"
+                        className="underline text-blue-500 hover:text-blue-700"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        https://github.com/WaffyJaf/CaFewaffy
+                      </a>
+                    </h3>
                
                 {/* รูปภาพพร้อมปุ่มเลื่อน ซ้าย/ขวา แสดงได้ทุกขนาดหน้าจอ */}
                 <div className="relative mb-4">
                   <div
-                    ref={project2Ref}
+                    ref={project3Ref}
                     className="overflow-x-auto flex gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
                   >
                     {[
@@ -460,12 +486,15 @@ const HomePage: React.FC = () => {
                         />
                         <p className="text-white text-sm text-center">{item.caption}</p>
                       </div>
+                      
                     ))}
+                    
                   </div>
+                  
 
                   {/* ปุ่มเลื่อนซ้าย */}
                   <button
-                    onClick={() => project2Ref.current?.scrollBy({ left: -300, behavior: 'smooth' })}
+                    onClick={() => project3Ref.current?.scrollBy({ left: -300, behavior: 'smooth' })}
                     className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-purple-700 hover:bg-purple-900 p-2 rounded-full"
                   >
                     <ChevronDown className="rotate-90 w-5 h-5 text-white" />
@@ -473,7 +502,7 @@ const HomePage: React.FC = () => {
 
                   {/* ปุ่มเลื่อนขวา */}
                   <button
-                    onClick={() => project2Ref.current?.scrollBy({ left: 300, behavior: 'smooth' })}
+                    onClick={() => project3Ref.current?.scrollBy({ left: 300, behavior: 'smooth' })}
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-purple-700 hover:bg-purple-900 p-2 rounded-full"
                   >
                     <ChevronDown className="-rotate-90 w-5 h-5 text-white" />
@@ -486,11 +515,11 @@ const HomePage: React.FC = () => {
             <div
               className="group relative bg-amber-300/20 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 animate-slide-in-left"
               style={{ animationDelay: '0.4s' }}
-            >
+             >
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <h3 className="text-xl font-semibold mb-2">เว็บร้านค้าขายไอดีเกม</h3>
-                <p className="text-gray-300 mb-3">เว็บไซต์อีคอมเมิร์ซสำหรับซื้อขายไอดีเกมที่นิยมในหมู่เกมเมอร์</p>
+                <p className="text-gray-300 mb-3 text">เว็บไซต์อีคอมเมิร์ซสำหรับซื้อขายไอดีเกมที่นิยมในหมู่เกมเมอร์</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {['React', 'Tailwind CSS','Node.js','TypeScript', 'Mysql', 'Prisma'].map((tech, techIndex) => (
                     <span key={techIndex} className="px-3 py-1 bg-white/10 rounded-full text-sm">
@@ -498,6 +527,17 @@ const HomePage: React.FC = () => {
                     </span>
                   ))}
                 </div>
+                <h3 className="text-sm text-yellow-400 mb-2">
+                  Source Code Git:{' '}
+                  <a
+                    href="https://github.com/WaffyJaf/waffy-shop"
+                    className="underline text-blue-500 hover:text-blue-700"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://github.com/WaffyJaf/waffy-shop
+                  </a>
+                </h3>
 
                 {/* รูปภาพพร้อมปุ่มเลื่อน ซ้าย/ขวา แสดงได้ทุกขนาดหน้าจอ */}
                 <div className="relative mb-4">
@@ -555,7 +595,7 @@ const HomePage: React.FC = () => {
             <div
               className="group relative bg-purple-600/20 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 animate-masonry-reveal"
               style={{ animationDelay: '0.6s' }}
-            >
+              >
               <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-rose-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <h3 className="text-xl font-semibold mb-2">ระบบทดสอบ seo</h3>
@@ -618,6 +658,69 @@ const HomePage: React.FC = () => {
                   {/* ปุ่มเลื่อนขวา */}
                   <button
                     onClick={() => project4Ref.current?.scrollBy({ left: 300, behavior: 'smooth' })}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-purple-700 hover:bg-purple-900 p-2 rounded-full"
+                  >
+                    <ChevronDown className="-rotate-90 w-5 h-5 text-white" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 2: Smart Mailbox */}
+            <div
+              className="group relative bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 animate-fade-in"
+              style={{ animationDelay: '0.2s' }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+              <div className="relative z-10">
+                <h3 className="text-xl font-semibold mb-2 text-emerald-300">Mini project และการเข้าร่วมอบรม</h3>
+                <p className="text-gray-300 mb-3">โปรเจคทางด้าน Hardware และการเข้าร่วมอบรมที่ผ่านมา</p>
+                
+               
+                {/* รูปภาพพร้อมปุ่มเลื่อน ซ้าย/ขวา แสดงได้ทุกขนาดหน้าจอ */}
+                <div className="relative mb-4">
+                  <div
+                    ref={project2Ref}
+                    className="overflow-x-auto flex gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
+                  >
+                    {[
+                      { src: '/k/car.jpg', caption: 'รถหุ่นยนต์ Smart Car Esp 32 ' },
+                      { src: '/k/k3.png', caption: 'ออกแบบวงจรควบคุมความเร็วมอเตอร์' },
+                      { src: '/k/os.png', caption: 'ผ่านการอบรม Data Science' },
+                    
+                    ].map((item, imgIndex) => (
+                      <div
+                        key={imgIndex}
+                        className="w-[400px] flex-shrink-0 snap-center flex flex-col items-center animate-slide-up hover:scale-105 transition-transform duration-300 cursor-pointer"
+                        style={{ animationDelay: `${imgIndex * 0.2}s` }}
+                        onClick={() => setSelectedImage(item)}
+                      >
+                        <Image
+                          src={item.src}
+                          alt={`Project preview ${imgIndex + 1}`}
+                          width={500}      
+                          height={320}     
+                          className="rounded-lg shadow-lg mb-2 object-cover"
+                        />
+                        <p className="text-white text-sm text-center">{item.caption}</p>
+                      </div>
+                      
+                    ))}
+                    
+                  </div>
+                  
+
+                  {/* ปุ่มเลื่อนซ้าย */}
+                  <button
+                    onClick={() => project2Ref.current?.scrollBy({ left: -300, behavior: 'smooth' })}
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-purple-700 hover:bg-purple-900 p-2 rounded-full"
+                  >
+                    <ChevronDown className="rotate-90 w-5 h-5 text-white" />
+                  </button>
+
+                  {/* ปุ่มเลื่อนขวา */}
+                  <button
+                    onClick={() => project2Ref.current?.scrollBy({ left: 300, behavior: 'smooth' })}
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-purple-700 hover:bg-purple-900 p-2 rounded-full"
                   >
                     <ChevronDown className="-rotate-90 w-5 h-5 text-white" />
