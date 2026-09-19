@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image'
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu} from 'lucide-react';
+import { ChevronDown, Github, Facebook, Mail, Phone, MapPin, Code, Cpu, Languages} from 'lucide-react';
 
 // Define interfaces for TypeScript
 interface MousePosition {
@@ -147,13 +147,13 @@ const HomePage: React.FC = () => {
                   Natthathida Khamai
                 </h1>
                 <p className="text-lg md:text-xl text-black mb-4 animate-slide-up">
-                  Full Stack Developer | Software Developer
+                  Software Engineer | Software Developer
                 </p>
                 <p className="text-base text-black  animate-slide-up">
-                  สาขาวิศวกรรมคอมพิวเตอร์
+                  Computer Engineering
                 </p>
                 <p className="text-base text-black mb-8 animate-slide-up">
-                  คณะเทคโนโลยีสารสนเทศและการสื่อสาร มหาวิทยาลัยพะเยา
+                  School of Information and Communication Technology, University of Phayao
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-6 mb-12 animate-slide-up">
                   <button 
@@ -161,13 +161,13 @@ const HomePage: React.FC = () => {
                     className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     <ChevronDown className="inline-block w-5 h-5 mr-2" />
-                    ผลงานที่ผ่านมา
+                    Projects
                   </button>
                   <button 
                     onClick={() => scrollToSection('contact')}
                     className="border-2 border-gray-700 hover:border-gray-600 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm text-black"
                   >
-                    ข้อมูลติดต่อ
+                    Contact Information
                   </button>
                 </div>
                 <div className="flex justify-center md:justify-start space-x-6 mb-3">
@@ -214,16 +214,18 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                เกี่ยวกับฉัน
+                About Me
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed">
-                สวัสดีค่ะ ดิฉันเป็นเด็กจบใหม่ มีประสบการณ์ฝึกงาน 4 เดือน ตำแหน่ง Software Developer พัฒนาระบบ HR Cloud เป็นระบบสำหรับบริหารงานบุคคลภายในองค์กร เช่น คำนวณเงินเดือน OT 
-                ระบบลงเวลาทำงานพนักงาน ระบบจัดการข้อมูลพนักงาน   และมีประสบการณ์ด้านการพัฒนาเว็บไซต์ แอปพลิเคชัน โปรเจกต์ต่างๆ 1 ปี เคยพัฒนาระบบอีคอมเมิร์ซ ระบบกิจกรรมของมหาวิทยาลัย
-                ระบบการชำระเงินที่มี Dashboard สรุปยอดขาย  เรียนรู้ไวและสามารถปรับตัวได้ดี
-                จึงมุ่งหวังที่จะมีโอกาสทำงานในองค์กรที่สามารถต่อยอดความรู้ และมุ่งมั่นที่จะส่งมอบงานที่มีคุณภาพ
+                Computer Engineering graduate with 6 months of experience as a Software Engineer in a production environment and previous internship experience as a Software Developer. Experienced in software deployment, production troubleshooting, software updates, and system maintenance. Strong foundation in full-stack development, databases, and API integration, with experience collaborating with customers and cross-functional teams to resolve technical issues.
 
               </p>
               <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+                  <Languages  className="w-8 h-8 text-yellow-400 mb-2" />
+                  <h3 className="font-semibold mb-1">Languages</h3>
+                  <p className="text-sm text-gray-400">Chinese (Workplace Communication)</p>
+                </div>
                 <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
                   <Code className="w-8 h-8 text-blue-400 mb-2" />
                   <h3 className="font-semibold mb-1">Software</h3>
@@ -293,7 +295,7 @@ const HomePage: React.FC = () => {
             <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
               Project & Experience
             </h2>
-            <p className="text-lg text-gray-300">ผลงานและประสบการณ์สะสมที่ผ่านมา</p>
+            <p className="text-lg text-gray-300">Selected Projects</p>
           </div>
           <div className="grid grid-cols-1 gap-8">
             {/* Project 1: Activity Up */}
@@ -304,7 +306,7 @@ const HomePage: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               <div className="relative z-10">
                 <h3 className="text-xl font-semibold mb-2 text-purple-400">Activity Up</h3>
-                <p className="text-gray-300 mb-3">เว็บไซต์อำนวยความสะดวกสำหรับกิจกรรมมหาวิทยาลัยพะเยา ใช้ระบบล็อกอิน Microsoft ในการเก็บ token </p>
+                <p className="text-gray-300 mb-3">A website designed to facilitate university activities at the University of Phayao, using Microsoft Login for token storage.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {['React', 'Tailwind CSS','Node.js','TypeScript', 'Mysql', 'Prisma', 'Flutter'].map((tech, techIndex) => (
                     <span key={techIndex} className="px-3 py-1 bg-white/10 rounded-full text-sm">
@@ -328,7 +330,7 @@ const HomePage: React.FC = () => {
 
                 {/* Section 1: รูปเว็บไซต์ */}
                 <div className="mb-6">
-                  <h4 className="text-lg font-medium text-gray-200 mb-2">ภาพเว็บไซต์</h4>
+                  <h4 className="text-lg font-medium text-gray-200 mb-2">Website Screenshots</h4>
                   <h4 className="text-lg font-medium text-gray-200 mb-2"></h4>
                   <div className="relative">
                     <div
@@ -336,13 +338,13 @@ const HomePage: React.FC = () => {
                       className="overflow-x-auto flex gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
                     >
                       {[
-                        { src: '/AC/login.png', caption: 'หน้าเข้าสู่ระบบ' },
-                        { src: '/AC/home.png', caption: 'หน้าแรกของเว็บไซต์และฟังก์ชันหลัก' },
-                        { src: '/AC/dbac.png', caption: 'หน้าสรุปกิจกรรมในระบบ' },
-                        { src: '/AC/pjdetial.png', caption: 'รายละเอียดกิจกรรม' },
-                        { src: '/AC/sh.png', caption: 'หน้าค้นหาประวัตินิสิต' },
-                        { src: '/AC/save.png', caption: 'หน้าบันทึกการเข้าร่วมกิจกรรม' },
-                        { src: '/AC/activity.png', caption: 'หน้ากิจกรรมที่มีการจัดขึ้น' },
+                        { src: '/AC/login.png', caption: 'Login Page' },
+                        { src: '/AC/home.png', caption: 'Website Home Page & Main Features' },
+                        { src: '/AC/dbac.png', caption: 'Activity Summary Dashboard' },
+                        { src: '/AC/pjdetial.png', caption: 'Activity Details' },
+                        { src: '/AC/sh.png', caption: 'Student History Search' },
+                        { src: '/AC/save.png', caption: 'Activity Participation Record' },
+                        { src: '/AC/activity.png', caption: 'Available Activities' },
                       ].map((image, imgIndex) => (
                         <div
                           key={imgIndex}
@@ -382,19 +384,19 @@ const HomePage: React.FC = () => {
 
                 {/* Section 2: รูปแอปมือถือ */}
                 <div>
-                  <h4 className="text-lg font-medium text-gray-200 mb-2">ภาพแอปพลิเคชันมือถือ (Flutter)</h4>
+                  <h4 className="text-lg font-medium text-gray-200 mb-2">Mobile Application Screenshots (Flutter)</h4>
                   <div className="relative">
                     <div
                       ref={activityAppRef}
                       className="overflow-x-auto flex gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
                     >
                       {[
-                        { src: '/AC/homem.png', caption: 'หน้าแรก' },
-                        { src: '/AC/hours.png', caption: 'หน้าชั่วโมงกิจกรรมสะสม' },
-                        { src: '/AC/regisac.png', caption: 'หน้าลงทะเบียนเข้าร่วมกิจกรรม' },
-                        { src: '/AC/scan.png', caption: 'หน้าสแกน QR' },
-                        { src: '/AC/record.png', caption: 'หน้าประวัติ' },
-                        { src: '/AC/regis.png', caption: 'หน้าลงทะเบียน' }
+                       { src: '/AC/homem.png', caption: 'Home Page' },
+                       { src: '/AC/hours.png', caption: 'Activity Hours' },
+                       { src: '/AC/regisac.png', caption: 'Activity Registration' },
+                       { src: '/AC/scan.png', caption: 'QR Code Scanner' },
+                       { src: '/AC/record.png', caption: 'Activity History' },
+                       { src: '/AC/regis.png', caption: 'Registration Page' }
                         
                       ].map((image, imgIndex) => (
                         <div
@@ -443,8 +445,8 @@ const HomePage: React.FC = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               <div className="relative z-10">
-                <h3 className="text-xl font-semibold mb-2 text-emerald-300">ระบบชำระเงินคาเฟ่ พร้อม Dashboard สรุปยอด</h3>
-                <p className="text-gray-300 mb-3">โปรเจคเว็บที่พัฒนาโดย .NET + Angular สำหรับชำระเงินแบบง่าย อำนวยความสะดวกแก่ผู้ประกอบการ</p>
+                <h3 className="text-xl font-semibold mb-2 text-emerald-300">Cafe Payment System with Sales Dashboard</h3>
+                <p className="text-gray-300 mb-3">A web project developed using .NET and Angular for simple payment processing and sales management, designed to provide convenience for business owners.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {['.NET','Angular', 'TypeScript'].map((tech, techIndex) => (
                     <span key={techIndex} className="px-3 py-1 bg-white/10 rounded-full text-sm">
@@ -472,11 +474,11 @@ const HomePage: React.FC = () => {
                     className="overflow-x-auto flex gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
                   >
                     {[
-                      { src: '/cafe/homecafe.png', caption: 'หน้าหลักแสดงเมนูและสามารถเพิ่มลบ สินค้าได้' },
-                      { src: '/cafe/das.png', caption: 'หน้าสรุปยอดขาย สินค้าขายดี แนวโน้ม' },
-                      { src: '/cafe/pay.png', caption: 'หน้าชำระเงินและเพิ่มสินค้าลงตะกร้า' },
-                      { src: '/cafe/manage.png', caption: 'หน้าเพิ่มหมวดหมู่สินค้า' },
-                      { src: '/cafe/addcafe.png', caption: 'หน้าเพิ่มสินค้า' },
+                      { src: '/cafe/homecafe.png', caption: 'Home Page – Menu & Product Management' },
+                      { src: '/cafe/das.png', caption: 'Sales Dashboard – Sales Summary, Best-Selling Products & Trends' },
+                      { src: '/cafe/pay.png', caption: 'Payment Page – Checkout & Add Products to Cart' },
+                      { src: '/cafe/manage.png', caption: 'Product Category Management' },
+                      { src: '/cafe/addcafe.png', caption: 'Add Product' },
                     ].map((item, imgIndex) => (
                       <div
                         key={imgIndex}
@@ -525,8 +527,8 @@ const HomePage: React.FC = () => {
              >
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               <div className="relative z-10">
-                <h3 className="text-xl font-semibold mb-2">เว็บร้านค้าขายไอดีเกม</h3>
-                <p className="text-gray-300 mb-3 text">เว็บไซต์อีคอมเมิร์ซสำหรับซื้อขายไอดีเกมที่นิยมในหมู่เกมเมอร์</p>
+                <h3 className="text-xl font-semibold mb-2">Game Account E-Commerce Website</h3>
+                <p className="text-gray-300 mb-3 text">An e-commerce website for buying and selling popular game accounts among gamers.</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {['React', 'Tailwind CSS','Node.js','TypeScript', 'Mysql', 'Prisma'].map((tech, techIndex) => (
                     <span key={techIndex} className="px-3 py-1 bg-white/10 rounded-full text-sm">
@@ -553,12 +555,12 @@ const HomePage: React.FC = () => {
                     className="overflow-x-auto flex gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
                   >
                     {[
-                      { src: '/lo.png', caption: 'หน้า Login' },
-                      { src: '/homegame.png', caption: 'หน้าแรก' },
-                      { src: '/cart.png', caption: 'ตะกร้าสินค้า' },
-                      { src: '/pop.png', caption: 'หน้าเติมเงิน' },
-                      { src: '/all.png', caption: 'สินค้าทั้งหมด' },
-                      { src: '/manageproduct.png', caption: 'จัดการสินค้า' },
+                      { src: '/lo.png', caption: 'Login Page' },
+                      { src: '/homegame.png', caption: 'Home Page' },
+                      { src: '/cart.png', caption: 'Shopping Cart' },
+                      { src: '/pop.png', caption: 'Top-Up Page' },
+                      { src: '/all.png', caption: 'All Products' },
+                      { src: '/manageproduct.png', caption: 'Product Management' },
                     ].map((image, imgIndex) => (
                       <div
                         key={imgIndex}
@@ -605,16 +607,16 @@ const HomePage: React.FC = () => {
               >
               <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-rose-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               <div className="relative z-10">
-                <h3 className="text-xl font-semibold mb-2">ระบบทดสอบ seo</h3>
+                <h3 className="text-xl font-semibold mb-2">SEO Testing System</h3>
                 <p className="text-gray-300 mb-3">
-                  เว็บไซต์บทความที่ออกแบบมาเพื่อ SEO Friendly{' '}
+                  An article-based website designed to be SEO-friendly{' '}
                   <a
                     href="https://waffy-game.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-400 underline hover:text-blue-300 transition-colors"
                   >
-                    คลิกเพื่อเยี่ยมชม
+                    Click to Visit
                   </a>
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -631,10 +633,10 @@ const HomePage: React.FC = () => {
                     className="overflow-x-auto flex gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
                   >
                     {[
-                      { src: '/game/newgame.png', caption: 'หน้าบทความเกมใหม่' },
-                      { src: '/game/das.png', caption: 'หน้าแดชบอร์ด Google Search Console' },
-                      { src: '/game/key.png', caption: 'หน้าบทความ' },
-                      { src: '/game/home3.png', caption: 'หน้าแรกของเว็บไซต์' }
+                      { src: '/game/newgame.png', caption: 'New Game Articles' },
+                      { src: '/game/das.png', caption: 'Google Search Console Dashboard' },
+                      { src: '/game/key.png', caption: 'Article Page' },
+                      { src: '/game/home3.png', caption: 'Website Home Page' },
                     ].map((item, imgIndex) => (
                       <div
                         key={imgIndex}
@@ -680,8 +682,8 @@ const HomePage: React.FC = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               <div className="relative z-10">
-                <h3 className="text-xl font-semibold mb-2 text-emerald-300">Mini project และการเข้าร่วมอบรม</h3>
-                <p className="text-gray-300 mb-3">โปรเจคทางด้าน Hardware และการเข้าร่วมอบรมที่ผ่านมา</p>
+                <h3 className="text-xl font-semibold mb-2 text-emerald-300">Mini Projects & Training</h3>
+                <p className="text-gray-300 mb-3">Hardware-related projects and training programs attended.</p>
                 
                
                 {/* รูปภาพพร้อมปุ่มเลื่อน ซ้าย/ขวา แสดงได้ทุกขนาดหน้าจอ */}
@@ -691,9 +693,9 @@ const HomePage: React.FC = () => {
                     className="overflow-x-auto flex gap-4 snap-x snap-mandatory pb-4 scroll-smooth"
                   >
                     {[
-                      { src: '/k/os.png', caption: 'ผ่านการอบรม Data Science' },
-                      { src: '/k/car.jpg', caption: 'รถหุ่นยนต์ Smart Car Esp 32 ' },
-                      { src: '/k/k3.png', caption: 'ออกแบบวงจรควบคุมความเร็วมอเตอร์' },
+                      { src: '/k/os.png', caption: 'Data Science Training' },
+                      { src: '/k/car.jpg', caption: 'Smart Car with ESP32' },
+                      { src: '/k/k3.png', caption: 'Motor Speed Control Circuit Design' },
                     
                     ].map((item, imgIndex) => (
                       <div
@@ -744,10 +746,10 @@ const HomePage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-              ข้อมูลติดต่อ
+              Contact Information
             </h2>
             <p className="text-lg text-gray-300">
-              หากต้องการพูดคุยหรือสอบถามข้อมูลเพิ่มเติม
+              Feel free to get in touch if you would like to discuss or learn more.
             </p>
           </div>
           <div className="space-y-8">
@@ -775,7 +777,7 @@ const HomePage: React.FC = () => {
               </div>
               <div>
                 <h3 className="font-semibold">address</h3>
-                <p className="text-gray-300">เชียงใหม่, ประเทศไทย</p>
+                <p className="text-gray-300">Chiang Mai, Thailand</p>
               </div>
             </div>
           </div>
